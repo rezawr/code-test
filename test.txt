@@ -1,0 +1,38 @@
+Hi Reza,
+
+i have the following "new" task currently working also with LLM's / OCR technology. Do you think you can handle it?
+Otherwise i would send you a more regular full stack task.
+
+Overview
+
+You will develop a full-stack application in Node.js/TypeScript that implements the following functionality:
+1. A backend with an endpoint to upload PDF files.
+2. An OCR/LLM pipeline that processes the uploaded PDF to extract structured text.
+3. A frontend to visualize the extracted text in a split-view layout, with interactive hover functionality to highlight the corresponding text in the PDF.
+
+Requirements
+
+Backend
+1. Endpoint:
+- POST /upload
+- Accepts a PDF file via multipart form data.
+- Runs an OCR/LLM pipelin   e (e.g., Tesseract.js for OCR or integrates an external LLM API).
+- Extracts text and organizes it into a structured format (e.g., JSON with page numbers, coordinates, and text content).
+- Returns the structured data in the response.
+
+2. OCR/LLM Pipeline:
+- Use an OCR library (e.g., Tesseract.js) to extract text and bounding boxes from the PDF or a hosted LLM API (e.g. zerox) if applicable.
+- Hint: The pipeline can also run simultaneously multiple functions to extract data from a PDF and then be merged together.
+
+
+Frontend
+1. Split View Layout:
+- Left Panel: Displays the extracted text as a list or tree structure.
+- Right Panel: Renders the PDF document in a viewer (e.g., react-pdf or pdf.js).
+2. Interactive Hover:
+- When hovering over text in the left panel, the corresponding region in the PDF is highlighted.
+- When hovering over a region in the PDF, the related text in the left panel is highlighted.
+3. File Upload:
+- A file input that allows the user to upload a PDF.
+- After upload, the frontend sends the file to the backend and visualizes the response.
+
